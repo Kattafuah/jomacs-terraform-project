@@ -27,29 +27,8 @@ jobs:
         with:
           terraform_version: 1.0.1
           terraform_wrapper: false
-
-      - name: Terraform Format
-        id: fmt
-        run: terraform fmt -check
-
-      - name: Terraform Init
-        id: init
-        run: terraform init
-
-      - name: Terraform Plan
-        id: plan
-        run: terraform plan -no-color
-
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
-
-      - name: Sync S3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read
-env:
-      SOURCE_DIR: './jomacs-terraform-project/tf.tfstate'
-      AWS_REGION: 'us-east-1'
-      AWS_S3_BUCKET: 'tproject1'
+    
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
 
         

@@ -50,4 +50,6 @@ In all, this configuration will provision 22 resources.
 
 ## Steps to validate the setup 
 1. To validate this setup, copy and paste the load balancer dns name that is outputed after your resources have been created and are running into your browser address bar and hit enter.
-2. You should get a response **Congratulating** for installing Nginix - just like the image below: 
+2. You should get a response **Congratulating** you for installing Nginix - just like the image below:
+![proof of setup](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/43766e08-a810-46d3-9a00-e424ccfe3249)
+

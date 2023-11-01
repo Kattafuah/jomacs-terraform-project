@@ -34,15 +34,10 @@ jobs:
         id: init
         run: terraform init
 
-      - name: Terraform Plan
-        id: plan
-        run: terraform plan -no-color
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
 
   #This block of terraform destroy should be commented out prevent the destruction of the resources immediately after provisioning.
       - name: Terraform Destroy
-        run: terraform destroy 
+        run: terraform destroy -auto-approve
 
         

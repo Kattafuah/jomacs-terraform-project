@@ -65,7 +65,7 @@ Below is a simple illustration of the architecture of the cloud solution to be d
    
 ![proof of setup](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/43766e08-a810-46d3-9a00-e424ccfe3249)
 
-### CI/CD - Deploying via GitHub Actions 
+### CI/CD - Deploying via GitHub Actions (Automation)
 1. After going through the code, reading the comments and modifying the code as necessary in your github repo, commit your changes and push to main or the requisite branch. 
 2. The first thing you'll need to do before your GitHub Actions can run is to add your AWS credentials to the repository. To do this you will need to follow these steps:
 
@@ -87,7 +87,7 @@ Below is a simple illustration of the architecture of the cloud solution to be d
 
 ![githubactions_test_success](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/a4e21588-b793-4ca2-8322-81d74f17f1de)
 
-#### Steps to validate the setup
+#### Steps to validate automated setup
 5. Just like working in your local environment, you can copy and paste the load balancer dns name that is outputed under the terraform apply log (above) after your resources have been created and are running into your browser address bar and hit enter.
 6. You should get a response **Congratulating** you for installing Nginix.
 

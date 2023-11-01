@@ -8,7 +8,7 @@
 This is a cloud project aimed at testing my knowledge and understanding of infrastructure as code (IaC) via the use of terraform to provision AWS resources. It also tests my understanding and utilization of CI/CD via the Github Actions tool.
 
 ## Objective
-Create a secure VPC environment in AWS using Terraform where an EC2 instance is running an Nginx web server. The EC2 instance should reside within a private subnet and should be accessible to the outside world via a load balancer. Traffic to the EC2 instance should be routed through a NAT gateway.
+To create a secure VPC environment in AWS using Terraform where an EC2 instance is running an Nginx web server. The EC2 instance should reside within a private subnet and should be accessible to the outside world via a load balancer. Traffic to the EC2 instance should be routed through a NAT gateway.
 
 ## Project Structure
 
@@ -62,22 +62,22 @@ In all, this configuration will provision 22 resources.
 ![proof of setup](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/43766e08-a810-46d3-9a00-e424ccfe3249)
 
 ### CI/CD - Deploying via GitHub Actions 
-1. After going through the code, reading the comments and modifying the code as necessary in your github repo. Commit your changes and push to main or the requisite branch. 
+1. After going through the code, reading the comments and modifying the code as necessary in your github repo, commit your changes and push to main or the requisite branch. 
 2. The first thing you'll need to do before your GitHub Actions can run is to add your AWS credentials to the repository. To do this you will need to follow these steps:
-  a. Navigate to your repository and select the Settings tab.
-  b. Once there you should see on the left a Secrets, click on that.
-  c. Click on the New repository secret button.
-  d. Add your AWS_SECRET_ACCESS_KEY and click the Add secret button.
-  e. Repeat step 3 and add your AWS_ACCESS_KEY_ID and click the Add secret button.
-3. Subsequently select the Actions tab and select the requisite workflow. This should open up the workflow as shown below.
+  a. Navigate to your repository and select the "Settings" tab.
+  b. Once there you should see on the left a button labeled "Secret and Variables", click on that. From that dropdown menu, click on the "Actions" button.
+  c. From the Actions panel that would open, click on the "New repository secret" button located on the right hand corner.
+  d. Add your AWS_SECRET_ACCESS_KEY and click the "Add secret" button.
+  e. Repeat *step d* and add your AWS_ACCESS_KEY_ID and click the "Add secret" button.
+3. Subsequently select the "Actions" tab and select the requisite workflow. This should open up the workflow as shown below.
    
 ![githubactions_summary_test_success](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/51d54b9f-1cce-44f2-b2dc-c98d1ca1ba1d)
 
-4. Clicking on the Terraform tab under the actions.yaml should open up a successful Terraform log file as shown below.
+4. Clicking on the "Terraform" tab under the actions.yaml should open up a successful Terraform log file as shown below.
 
 ![githubactions_test_success](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/a4e21588-b793-4ca2-8322-81d74f17f1de)
 
 #### Steps to validate the setup
 5. Just like working in your local environment, you can copy and paste the load balancer dns name that is outputed under the terraform apply log (above) after your resources have been created and are running into your browser address bar and hit enter.
-6. You should get a response **Congratulating** you for installing Nginix
+6. You should get a response **Congratulating** you for installing Nginix.
 

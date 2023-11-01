@@ -41,7 +41,11 @@ To create a secure VPC environment in AWS using Terraform where an EC2 instance 
 
 In all, this configuration will provision 22 resources. 
 
-## Cloud Architecture
+## Architecture
+
+Below is a simple illustration of the architecture of the cloud solution to be deployed. 
+
+![trialarcprop](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/ca41703d-02b1-4b2d-923f-109081109a06)
 
 
 ## How to deploy the infrastructure.
@@ -64,11 +68,17 @@ In all, this configuration will provision 22 resources.
 ### CI/CD - Deploying via GitHub Actions 
 1. After going through the code, reading the comments and modifying the code as necessary in your github repo, commit your changes and push to main or the requisite branch. 
 2. The first thing you'll need to do before your GitHub Actions can run is to add your AWS credentials to the repository. To do this you will need to follow these steps:
+
    a. Navigate to your repository and select the "Settings" tab.
+
    b. Once there you should see on the left a button labeled "Secret and Variables", click on that. From that dropdown menu, click on the "Actions" button.
+
    c. From the Actions panel that would open, click on the "New repository secret" button located on the right hand corner.
+
    d. Add your AWS_SECRET_ACCESS_KEY and click the "Add secret" button.
+
    e. Repeat *step d* and add your AWS_ACCESS_KEY_ID and click the "Add secret" button.
+   
 3. Subsequently select the "Actions" tab and select the requisite workflow. This should open up the workflow as shown below.
    
 ![githubactions_summary_test_success](https://github.com/Kattafuah/jomacs-terraform-project/assets/16202873/51d54b9f-1cce-44f2-b2dc-c98d1ca1ba1d)
